@@ -1,0 +1,321 @@
+<!DOCTYPE html />
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>HTML-CSS-Bootstrap</title>
+
+    <!--Bootstrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-light fixed-top navbar-expand-md bg-light">
+            <div class="container">
+                <a href="#" class="navbar-brand mb-0 h1">
+                    <img src="img/logo.png" alt="Logo" class="d-inline-block align-top"/>
+                    Área do Agente
+                </a>
+    
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav" >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="#targetFormulario" class="nav-link">Formulário</a>
+                        </li>
+                        
+                        <li class="nav-item">
+                            <a href="#targetTabela" class="nav-link">Tabela</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#targetListas" class="nav-link">Listas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <h3 id="targetFormulario">Cadastro de clientes</h3>
+        <p>Prencha o <span>formulário</span> abaixo</p>
+
+        <!--Formulário-->
+        <form class="row g-3 bg-light" action="">
+            <div class="col-xl-2 col-md-3">
+                <label class="form-label" for="codigo">Código</label>
+                <input class="form-control" type="text" id="codigo" required>
+            </div>
+
+            <div class="col-xl-6 col-md-9">
+                <label class="form-label" for="nome">Nome</label>
+                <input class="form-control" type="text" id="nome" required>
+            </div>
+
+            <div class="col-xl-4 col-md-6">
+                <label class="form-label" for="dataDeNascimento">Data de Nascimento</label>
+                <input class="form-control" type="date" id="dataDeNascimento" required>
+            </div>
+
+            <div class="col-xl-2 col-md-3">
+                <label class="form-label" for="altura">Altura(m)</label>
+                <input class="form-control" type="text" id="altura" placeholder="em Metros" required>
+            </div>
+
+            <div class="col-xl-2 col-md-3">
+                <label class="form-label" for="peso">Peso</label>
+                <input class="form-control" type="text" id="peso" placeholder="em Quilogramas" required>
+            </div>
+
+            <div class="col-xl-3 col-md-5">
+                <label class="form-label" for="tipoDeCadastroPessoal">Tipo</label>
+                <select class="form-control" id="tipoDeCadastroPessoal">
+                    <option>Pessoa Física</option>
+                    <option>Pessoa Jurídica</option>
+                    <option>Especial</option>
+                    <option>Outro</option>
+                </select>
+            </div>
+
+            <div class="col-xl-5 col-md-7">
+                <label class="form-label" for="cadastroPessoal">CPF/CNPJ</label>
+                <input class="form-control" type="text" id="cadastroPessoal" required>
+            </div>
+
+            <div class="col-md-6">
+                <label class="form-label" for="sexo">Sexo</label>
+                <div class="form-check">
+                    <input type="radio" name="sexo" id="masculino" />
+                    <label class="form-check-label" for="masculino">Masculino</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" name="sexo" id="feminino" />
+                    <label class="form-check-label" for="feminino">Feminino</label>
+                </div>
+
+                <div class="form-check">
+                    <input type="radio" name="sexo" id="naoDeclarar" />
+                    <label class="form-check-label" for="naoDeclarar">Não declarar</label>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="row">
+                    <label class="form-label" for="necessidadeEspecial">Possui Necessidade Especial?</label>
+                    <div class="form-check col-md-6">
+                        <input class="form-check-input" name="necessidadeEspecial" type="checkbox" id="auditiva" />
+                        <label class="form-check-label" for="auditiva">Auditiva</label>
+                    </div>
+
+                    <div class="form-check col-md-6">
+                        <input class="form-check-input" name="necessidadeEspecial" type="checkbox" id="visual" />
+                        <label class="form-check-label" for="visual">Visual</label>
+                    </div>
+
+                    <div class="form-check col-md-6">
+                        <input class="form-check-input" name="necessidadeEspecial" type="checkbox" id="motora" />
+                        <label class="form-check-label" for="motora">Motora</label>
+                    </div>
+
+                    <div class="form-check col-md-6">
+                        <input class="form-check-input" name="necessidadeEspecial" type="checkbox" id="intelectual" />
+                        <label class="form-check-label" for="intelectual">Intelectual</label>
+                    </div>
+
+                    <div class="form-check col-md-6">
+                        <input class="form-check-input" name="necessidadeEspecial" type="checkbox"
+                            id="paralisiaCerebral" />
+                        <label class="form-check-label" for="paralisiaCerebral">Paralisia Cerebral</label>
+                    </div>
+
+                    <div class="form-check col-md-6">
+                        <input class="form-check-input" name="necessidadeEspecial" type="checkbox"
+                            id="nenhumaNecessidadeEspecial" />
+                        <label class="form-check-label" for="nenhumaNecessidadeEspecial">Nenhuma</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-12 text-center">
+                <button class="btn btn-secondary" týpe="submit">Enviar</button>
+            </div>
+        </form>
+
+        <!-- Tabela -->
+        <div id="targetTabela" class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-12 col-md-12">
+                    <h3>Clientes Cadastrados</h3>
+                    <p>Tabela contendo informações dos clientes cadastrados</p>
+
+                    <table class="table table-sm table-striped table-hover">
+                        <thead>
+                            <th>Código</th>
+                            <th>Nome</th>
+                            <th>Dt. Nasc.</th>
+                            <th>Sexo</th>
+                            <th>Altura</th>
+                            <th>Peso</th>
+                            <th>Tipo</th>
+                            <th>CPF/CNPJ</th>
+                            <th>Nec. Espec.</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>001</td>
+                                <td>João Silva</td>
+                                <td>15/12/1958</td>
+                                <td>Masculino</td>
+                                <td>1,76</td>
+                                <td>85,90</td>
+                                <td>Pessoa Jurídica</td>
+                                <td>46.452.359/0001-06</td>
+                                <td>Nenhuma</td>
+                            </tr>
+                            <tr>
+                                <td>002</td>
+                                <td>Pedro Pereira</td>
+                                <td>30/02/1996</td>
+                                <td>Masculino</td>
+                                <td>1,70</td>
+                                <td>74,00</td>
+                                <td>Pessoa Física</td>
+                                <td>127.369.548-30</td>
+                                <td>Auditiva</td>
+                            </tr>
+                            <tr>
+                                <td>003</td>
+                                <td>Maria Souza</td>
+                                <td>12/10/1999</td>
+                                <td>Feminino</td>
+                                <td>1,65</td>
+                                <td>85,90</td>
+                                <td>Pessoa Física</td>
+                                <td>457.265.983-72</td>
+                                <td>Nenhuma</td>
+                            </tr>
+                            <tr>
+                                <td>004</td>
+                                <td>Roberto Ribeiro</td>
+                                <td>05/06/1993</td>
+                                <td>Masculino</td>
+                                <td>1,80</td>
+                                <td>90,50</td>
+                                <td>Pessoa Jurídica</td>
+                                <td>49.297.862/0001-68</td>
+                                <td>Visual</td>
+                            </tr>
+                            <tr>
+                                <td>005</td>
+                                <td>Carla Fernandes</td>
+                                <td>08/07/1987</td>
+                                <td>Masculino</td>
+                                <td>1,78</td>
+                                <td>76,90</td>
+                                <td>Pessoa Jurídica</td>
+                                <td>75.635.794/0001-05</td>
+                                <td>Nenhuma</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <td>Total Cadastros</td>
+                            <td>05</td>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Listas -->
+                <div id="targetListas" class="col-xl-2 col-lg-6 col-md-12">
+                    <h3>Rotina</h3>
+                    <p>do agente.</p>
+
+                    <div class="listas">
+                        <ol>
+                            <!--Os links são apenas para teste-->
+                            <li><a href="http:\\www.google.com" target="_blank">Cadastrar Clientes</a></li>
+                            <li><a href="http:\\www.instagram.com" target="_blank">Acompanhamento Financeiro</a></li>
+                            <li><a href="http:\\www.facebook.com" target="_blank">Emissão de passagens</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="col-xl-2 col-lg-6 col-md-12">
+                    <h3>Sugestão</h3>
+                    <p>ao cliente.</p>
+
+                    <div class="listas">
+                        <ul>
+                            <li>Mochila/Mala</li>
+                            <li>Vestimenta adequada</li>
+                            <li>Itens de higiene/saúde pessoal</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="text-center">
+            <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#modalFormulario" id="botaoModal">Modal</button>
+        </div>
+
+        <div class="modal fade" id="modalFormulario" tabindex="-1" aria-labelledby="labelModal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="labelModal">Título do Modal</h5>
+                    </div>
+
+                    <div class="modal-body">
+                        <p>Texto do Modal</p>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="img/foto-card.jpg" alt="Foto de João Silva" class="card-img-top">
+            
+            <div class="card-body">
+                <h5 class="card-title text-center">João Silva</h5>
+
+                <p class="card-text">Este é João Silva, um dos futuros viajantes inscritos de nossa próxima excursão.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-light">
+        <!--a próxima TAG está fora de indentação por conta do alinhamento do texto no documento-->
+        <pre>
+"Viajar! Perder Países!
+Ser outro constantemente,
+Por a alma não ter raízes
+De viver de ver somente"
+        </pre>
+
+        <p>Primeira estrofe do poema <cite>Viajar! Perder Países</cite> de Fernando Pessoa.</p>
+    </footer>
+</body>
+
+</html>
